@@ -1,36 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GloriousWeb</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Blog</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDsbvIYXvPEipcfCEgrJ14M0HU7Zkih5CE",
+      authDomain: "glorioususers.firebaseapp.com",
+      projectId: "glorioususers",
+      storageBucket: "glorioususers.appspot.com",
+      messagingSenderId: "458420556347",
+      appId: "1:458420556347:web:7ebd8d8856c3260b95421e",
+      measurementId: "G-4V0JKT4NQY"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDsbvIYXvPEipcfCEgrJ14M0HU7Zkih5CE",
-    authDomain: "glorioususers.firebaseapp.com",
-    projectId: "glorioususers",
-    storageBucket: "glorioususers.appspot.com",
-    messagingSenderId: "458420556347",
-    appId: "1:458420556347:web:7ebd8d8856c3260b95421e",
-    measurementId: "G-4V0JKT4NQY"
-  };
+  <!-- Bootstrap Dark Theme CSS (if available) or Custom CSS -->
+    <link rel="stylesheet" href="dark-theme.css">
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-  </head>
-  <body>
-    
-  </body>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">GloriousWeb</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Posts</a>
+      </li>
+      
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-primary my-2 my-sm-0" href="signin.html">Sign In</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content Area -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Blog Post Entries -->
+    <div class="col-md-8">
+      <div class="card mb-4">
+        
+        <div class="card-body">
+          <h2 class="card-title">Welcome to GloriousWeb!</h2>
+          <p class="card-text">...</p>
+        </div>
+        <div class="card-footer text-muted">
+          May 12, 2024!
+        </div>
+      </div>
+      <!-- Repeat for more blog posts -->
+    </div>
+
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+      <!-- Search Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">Search</h5>
+        <div class="card-body">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-append">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- Categories Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">Categories</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li><a href="#">Number Systems</a></li>
+                <li><a href="#">Hexagesimal</a></li>
+                <li><a href="#">Unipiac Numerals</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<!-- <footer class="py-4 bg-primary">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright © My Blog 2024</p>
+  </div>
+</footer> -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
 </html>

@@ -1,0 +1,25 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+  }
+  
+  .navbar-dark.bg-primary {
+    background-color: #333333; /* Darker shade for navbar */
+    color: coral;
+  }
+  
+  .card {
+    background-color: #1e1e1e; /* Dark background for cards */
+    color: #ffffff; /* Light text for cards */
+  }
+  
+  a, a:hover {
+    color: #9a9a9a; /* Lighter text color for links */
+  }
+  
+  
+  h2 {
+    color: #00d96d; /* New primary color for headings */
+  }
+
+  
